@@ -27,7 +27,7 @@ function exibirTexto(selector, texto) {
 function sortear() {
     lendoInputs();
     if(isNaN(qtdeNumeros) || isNaN(numFinal) || isNaN(numFinal)) {
-    exibirTexto('#resultado', 'Valores incorretos'); // Checking if input values are valid; displaying error message if any field is blank
+    exibirTexto('#resultado', `<label class="texto__paragrafo">Valores Incorretos</label>`); // Checking if input values are valid; displaying error message if any field is blank
     } else {
         resultados = [] // Initializing array for storing results
         while(qtdeNumeros >= 1) {
@@ -35,7 +35,7 @@ function sortear() {
             resultados.push(resultado);
             qtdeNumeros--;                         
         }
-    exibirTexto('#resultado', `Números sorteados: ${resultados}`); // Displaying sorted numbers; enabling the restart button
+    exibirTexto('#resultado', `<label class="texto__paragrafo">Números sorteados:  ${resultados}</label>`); // Displaying sorted numbers; enabling the restart button
     document.getElementById('btn-reiniciar').classList.replace('container__botao-desabilitado', 'container__botao'); // Enabling the restart button
     }
 }
